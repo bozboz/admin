@@ -1,29 +1,43 @@
 {
-	"sass": [
-		"summernote/dist/summernote.css",
-		"jquery-ui/themes/base/all.css",
-		"jquery-ui/themes/base/datepicker.css",
-		"jquery-ui/themes/base/slider.css",
-		"jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.css",
-		"select2/dist/css/select2.css"
-	],
-	"scripts": [
-		"jquery-ui/ui/core.js",
-		"jquery-ui/ui/widget.js",
-		"jquery-ui/ui/datepicker.js",
-		"jquery-ui/ui/mouse.js",
-		"jquery-ui/ui/sortable.js",
-		"bootstrap/dist/js/bootstrap.min.js",
-		"summernote/dist/summernote.min.js",
-		"imagesloaded/imagesloaded.pkgd.min.js",
-		"masonry/dist/masonry.pkgd.min.js",
-		"handlebars/handlebars.min.js",
-		"jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.js",
-		"jqueryui-timepicker-addon/dist/jquery-ui-sliderAccess.js",
-		"select2/dist/js/select2.min.js",
-		"nestedSortable/jquery.ui.nestedSortable.js",
-		"knockout/dist/knockout.js",
-		"blueimp-file-upload/js/jquery.iframe-transport.js",
-		"blueimp-file-upload/js/jquery.fileupload.js",
-	]
+	"sass": {
+		"minFolder": "public/assets/css/min/admin",
+		"files": [
+			"bower_components/summernote/dist/summernote.css",
+			"bower_components/jquery-ui/themes/base/all.css",
+			"bower_components/jquery-ui/themes/base/datepicker.css",
+			"bower_components/jquery-ui/themes/base/slider.css",
+			"bower_components/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.css",
+			"bower_components/select2/dist/css/select2.css",
+			"bower_components/bootstrap/dist/css/bootstrap.css",
+			"bower_components/admin/sass/style.scss"
+		]
+	},
+	"scripts": {
+		"minFolder": "public/assets/js/min/admin",
+		"files": [
+			"bower_components/jquery-ui/ui/core.js",
+			"bower_components/jquery-ui/ui/widget.js",
+			"bower_components/jquery-ui/ui/datepicker.js",
+			"bower_components/jquery-ui/ui/mouse.js",
+			"bower_components/jquery-ui/ui/sortable.js",
+			"bower_components/bootstrap/dist/js/bootstrap.min.js",
+			"bower_components/summernote/dist/summernote.min.js",
+			"bower_components/imagesloaded/imagesloaded.pkgd.min.js",
+			"bower_components/masonry/dist/masonry.pkgd.min.js",
+			"bower_components/handlebars/handlebars.min.js",
+			"bower_components/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.js",
+			"bower_components/jqueryui-timepicker-addon/dist/jquery-ui-sliderAccess.js",
+			"bower_components/select2/dist/js/select2.min.js",
+			"bower_components/nestedSortable/jquery.ui.nestedSortable.js",
+			"bower_components/knockout/dist/knockout.js",
+			"bower_components/blueimp-file-upload/js/jquery.iframe-transport.js",
+			"bower_components/blueimp-file-upload/js/jquery.fileupload.js",
+			"bower_components/admin/js/scripts.js",
+			"bower_components/admin/js/media-browser.js"
+		]
+	},
+	"copies": {
+		"bower_components/admin/images/**.*": "public/assets/images/admin",
+		"bower_components/fontawesome/fonts/**.*": "public/assets/fonts/admin/font-awesome"
+	}
 }

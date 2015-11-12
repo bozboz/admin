@@ -1,8 +1,8 @@
 @import "variables";
-@import "../../../bower_components/luigi/luigi";
-@import "../../../bower_components/font-awesome/scss/font-awesome";
-@import "../../../bower_components/bootstrap-sass-twbs/assets/stylesheets/_bootstrap";
+@import "../../luigi/_luigi";
+@import "../../font-awesome/scss/font-awesome";
 @import "base";
 @import "layout";
 @import "main";
+@import "media-library";
 @import "jquery-ui-custom";

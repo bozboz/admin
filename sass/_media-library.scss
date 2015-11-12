@@ -1,0 +1,94 @@
+.media-view {
+    border: solid #ddd;
+    border-width: 1px 0;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    overflow: hidden;
+}
+
+.masonry-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 0 15px 15px 0;
+    width: 172px;
+    background: #fff;
+    border-radius: 4px;
+    float: left;
+}
+.masonry-item-inline-media {
+    padding: 0;
+    border: 0;
+    background: none;
+}
+.masonry-item-inline-media label {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.icons {
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+p.icons, .icons p {
+    font-size: 12px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.icons form {
+    margin: 0
+}
+.icons .btn {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+}
+
+.media-is-used {
+    display: none;
+}
+.media-is-used + label {
+    opacity: 0.5;
+    background: #eee;
+}
+.media-is-used:checked + label {
+    opacity: 1;
+    background: #fff;
+    position: relative;
+}
+.media-is-used:checked + label:after {
+    font-family: FontAwesome;
+    content: "\f058";
+    position: absolute;
+    top: -7px;
+    right: 3px;
+    font-size: 36px;
+    color: #5CB85D;
+}
+.media-is-used:checked + label:before {
+    background: #fff;
+    border-radius: 36px;
+    border: 5px solid #3C773D;
+    content: '';
+    display: block;
+    height: 36px;
+    position: absolute;
+    right: 1px;
+    top: 0px;
+    width: 36px;
+}
+
+.media-modal ul {
+    margin-right: -15px;
+}
+
+.media-modal .modal-dialog {
+    width: 962px;
+}
+
+.media-browser {
+    overflow: hidden;
+}
+
+

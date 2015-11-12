@@ -3,13 +3,13 @@
  */
 
 .seperated {
-	@include opacity(50);
+	opacity: 50%;
 	display: block;
 	margin-top: $gap;
 	text-align: center;
 
 	&:hover {
-		@include opacity(100);
+		opacity: 100%;
 	}
 }
 
