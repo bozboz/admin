@@ -1,0 +1,18 @@
+/**
+ * Base
+ * e.g. div, p, a, h1, h2
+ */
+
+
+body {
+	padding-top: 50px + $gap;
+	color: $dark;
+	background: $mid;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0 0 $gap;
+}
+h1 {
+	line-height: 34px;
+}

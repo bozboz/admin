@@ -1,0 +1,17 @@
+/**
+ * Structure
+ * e.g. header, footer, breadcumb, menu, nav
+ */
+
+.navbar-inverse {
+	background: $dark;
+	border: solid $dark;
+	border-width: 0 $gap;
+}
+
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-text {
+	color: #ddd;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+	background: lighten($dark, 10%);
+}
