@@ -4,6 +4,7 @@
   "authors": [
     "Jim Hollington <jim@bozboz.co.uk>"
   ],
+  "main": [],
   "license": "MIT",
   "private": true,
   "ignore": [
