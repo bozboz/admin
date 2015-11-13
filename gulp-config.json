@@ -1,6 +1,6 @@
 {
 	"sass": {
-		"minFolder": "public/assets/css/min/admin",
+		"minFolder": "public/packages/bozboz/admin/css",
 		"files": [
 			"bower_components/summernote/dist/summernote.css",
 			"bower_components/jquery-ui/themes/base/all.css",
@@ -13,7 +13,7 @@
 		]
 	},
 	"scripts": {
-		"minFolder": "public/assets/js/min/admin",
+		"minFolder": "public/packages/bozboz/admin/js",
 		"files": [
 			"bower_components/jquery-ui/ui/core.js",
 			"bower_components/jquery-ui/ui/widget.js",
@@ -37,7 +37,7 @@
 		]
 	},
 	"copies": {
-		"bower_components/admin/images/**.*": "public/assets/images/admin",
-		"bower_components/fontawesome/fonts/**.*": "public/assets/fonts/admin/font-awesome"
+		"bower_components/admin/images/**.*": "public/packages/bozboz/admin/images",
+		"bower_components/fontawesome/fonts/**.*": "public/packages/bozboz/admin/css/fonts"
 	}
 }
