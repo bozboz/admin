@@ -1,6 +1,6 @@
 {
 	"sass": {
-		"minFolder": "public/packages/bozboz/admin/css",
+		"minFolder": "public/assets/css/min/admin",
 		"files": [
 			"bower_components/summernote/dist/summernote.css",
 			"bower_components/jquery-ui/themes/base/all.css",
@@ -13,7 +13,7 @@
 		]
 	},
 	"scripts": {
-		"minFolder": "public/packages/bozboz/admin/js",
+		"minFolder": "public/assets/js/min/admin",
 		"files": [
 			"bower_components/jquery-ui/ui/core.js",
 			"bower_components/jquery-ui/ui/widget.js",
@@ -32,12 +32,19 @@
 			"bower_components/knockout/dist/knockout.js",
 			"bower_components/blueimp-file-upload/js/jquery.iframe-transport.js",
 			"bower_components/blueimp-file-upload/js/jquery.fileupload.js",
+			"bower_components/blueimp-tmpl/js/tmpl.js",
+			"bower_components/blueimp-load-image/js/load-image.all.min.js",
+			"bower_components/blueimp-canvas-to-blob/js/canvas-to-blob.js",
+			"bower_components/blueimp-file-upload/js/jquery.fileupload-process.js",
+			"bower_components/blueimp-file-upload/js/jquery.fileupload-image.js",
+			"bower_components/blueimp-file-upload/js/jquery.fileupload-validate.js",
+			"bower_components/blueimp-file-upload/js/jquery.fileupload-ui.js",
 			"bower_components/admin/js/scripts.js",
 			"bower_components/admin/js/media-browser.js"
 		]
 	},
 	"copies": {
-		"bower_components/admin/images/**.*": "public/packages/bozboz/admin/images",
-		"bower_components/fontawesome/fonts/**.*": "public/packages/bozboz/admin/css/fonts"
+		"bower_components/admin/images/**.*": "public/assets/images/admin",
+		"bower_components/fontawesome/fonts/**.*": "public/assets/fonts/admin/font-awesome"
 	}
 }
