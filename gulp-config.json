@@ -32,13 +32,6 @@
 			"bower_components/knockout/dist/knockout.js",
 			"bower_components/blueimp-file-upload/js/jquery.iframe-transport.js",
 			"bower_components/blueimp-file-upload/js/jquery.fileupload.js",
-			"bower_components/blueimp-tmpl/js/tmpl.js",
-			"bower_components/blueimp-load-image/js/load-image.all.min.js",
-			"bower_components/blueimp-canvas-to-blob/js/canvas-to-blob.js",
-			"bower_components/blueimp-file-upload/js/jquery.fileupload-process.js",
-			"bower_components/blueimp-file-upload/js/jquery.fileupload-image.js",
-			"bower_components/blueimp-file-upload/js/jquery.fileupload-validate.js",
-			"bower_components/blueimp-file-upload/js/jquery.fileupload-ui.js",
 			"bower_components/admin/js/scripts.js",
 			"bower_components/admin/js/media-browser.js"
 		]
