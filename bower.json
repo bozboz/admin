@@ -27,6 +27,6 @@
     "select2": "~4.0.0",
     "blueimp-file-upload": "~9.9.3",
     "knockout": "#3.2.0",
-    "bootstrap-sass": "~3.3.5"
+    "bootstrap": "~3.3.5"
   }
 }
