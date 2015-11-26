@@ -58,7 +58,13 @@ jQuery(function($){
 			});
 		}
 
-		$.post('/admin/sort', {model: sortable.data('model'), items: data});
+		$.post('/admin/sort', {
+				model: sortable.data('model'),
+				items: data,
+				_token: $('[name=_token]').val()
+			}).fail(function() {
+				alert('An error occurred while trying to save the sort value. Please try again.');
+			});
 		$('.js-save-notification').hide();
 	});
 
