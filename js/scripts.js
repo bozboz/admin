@@ -24,6 +24,86 @@ jQuery(function($){
 		}
 	});
 
+	//Convert a MySQL DateTime formatted string into a JS Date object
+	var stringToDate = function(dateTimeString) {
+		var dateTimeExploded = dateTimeString.split(' ');
+		var dateInfo = dateTimeExploded[0].split('-');
+		var timeInfo = dateTimeExploded[1].split(':');
+
+		return new Date(dateInfo[0], dateInfo[1] - 1, dateInfo[2], timeInfo[0], timeInfo[1], timeInfo[2]);
+	};
+
+	//Parse config and convert applicable strings to Date objects
+	var parseDatepickerConfig = function(config) {
+		for (var key = config.length - 1; key >= 0; key--) {
+			switch(key){
+				case 'minDateTime':
+				case 'maxDateTime':
+				case 'defaultDate':
+				case 'defaultDateTime':
+					if (config[key] !== undefined && config[key] !== null) {
+						config[key] = new Date(config[key] * 1000);
+					}
+				break;
+			}
+		}
+		return config;
+	}
+
+	var initDatepickerField = function($picker, method, defaults) {
+		var config = window.datePicker[$picker.prop('id')];
+		$picker.prop('type', 'hidden');
+
+		var displayFieldId = $picker.prop('id')+'_alt';
+
+		$('label[for='+$picker.prop('name')+']').prop('for', displayFieldId);
+
+		var $displayField = $('<input>').prop({
+			type: 'text',
+			id: displayFieldId,
+			name: displayFieldId,
+			class: $picker.prop('class'),
+		});
+		$displayField.insertAfter($picker);
+
+		var date = $picker.val() === '' ? null : stringToDate($picker.val());
+
+		config = parseDatepickerConfig(config);
+
+		//Revert to some default if applicable
+		if (date === null && config.defaultDateTime !== undefined) {
+			date = config.defaultDateTime;
+		}
+console.log($.extend(defaults, config)); // do not commit
+		//Initialise picker
+		$displayField[method]($.extend(defaults, config));
+		if (date !== null) {
+			$displayField[method]('setDate', date);
+		}
+	}
+
+	$('.js-datepicker').each(function() {
+		initDatepickerField($(this), 'datepicker', {
+			showSecond: false,
+			dateFormat: 'dd/mm/yy',
+			altField: $(this),
+			altFieldTimeOnly: false,
+			altFormat: 'yy-mm-dd',
+		});
+	});
+
+
+	$('.js-datetimepicker').each(function() {
+		initDatepickerField($(this), 'datetimepicker', {
+			showSecond: false,
+			dateFormat: 'dd/mm/yy',
+			altField: $(this),
+			altFieldTimeOnly: false,
+			altFormat: 'yy-mm-dd',
+			altTimeFormat: 'HH:mm:ss',
+		});
+	});
+
 	function sendFile(files, editor) {
 		var temp_form = $('<form></form>');
 		$('body').append(temp_form);

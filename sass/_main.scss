@@ -192,6 +192,9 @@ select.form-control,
 input.form-control-wide {
 	max-width: 100%;
 }
+.form-control--small {
+	max-height: 250px;
+}
 .form-group,
 .form-row {
 	padding: 10px;
