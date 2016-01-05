@@ -193,7 +193,7 @@ input.form-control-wide {
 	max-width: 100%;
 }
 .form-control--small {
-	max-height: 250px;
+	max-width: 250px !important;
 }
 .form-group,
 .form-row {
