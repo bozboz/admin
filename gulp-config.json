@@ -38,6 +38,7 @@
 	},
 	"copies": {
 		"bower_components/admin/images/**.*": "public/assets/images/admin",
-		"bower_components/fontawesome/fonts/**.*": "public/assets/fonts/admin/font-awesome"
+		"bower_components/fontawesome/fonts/**.*": "public/assets/fonts/admin/font-awesome",
+		"bower_components/jquery-ui/themes/base/images/*": "public/assets/css/min/admin/images"
 	}
 }
