@@ -111,8 +111,13 @@
 	border-radius: 3px;
 	padding: 20px;
 	margin: 0 20px 20px;
-	overflow: hidden;
 	background: #fff;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
 
 .main .page-header {
