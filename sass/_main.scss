@@ -304,6 +304,7 @@ body.dragging, body.dragging * {
 	ol {
 		padding-left: 30px;
 		position: relative;
+		list-style: none;
 		li {
 			border-left: 3px solid #ddd;
 
@@ -315,7 +316,6 @@ body.dragging, body.dragging * {
 	}
 	li {
 		border-top: 1px solid #ddd;
-		overflow: hidden;
 		&:nth-child(odd) {
 			background-color: #f9f9f9;
 			li:nth-child(odd) {

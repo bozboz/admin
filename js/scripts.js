@@ -74,7 +74,6 @@ jQuery(function($){
 		if (date === null && config.defaultDateTime !== undefined) {
 			date = config.defaultDateTime;
 		}
-console.log($.extend(defaults, config)); // do not commit
 		//Initialise picker
 		$displayField[method]($.extend(defaults, config));
 		if (date !== null) {
@@ -124,6 +123,56 @@ console.log($.extend(defaults, config)); // do not commit
 	  masonryContainer.masonry();
 	});
 
+	/*====================================
+	=            New Sortable            =
+	====================================*/
+
+	$('.sortable:not(.deprecated-sortable)').each(function(){
+
+		var onSortingDrop = function(e, obj) {
+			var before = obj.item.prev('[data-id]');
+			var after = obj.item.next('[data-id]');
+			var parent = obj.item.parent('ol').parent('li[data-id]');
+
+			var data = {
+				model: $(this).sortable().data('model'),
+				instance: obj.item.data('id'),
+				_token: $('[name=_token]').val()
+			};
+
+			if (before.length) {
+				data.before = before.data('id');
+			} else if (after.length) {
+				data.after = after.data('id');
+			} else if (parent.length) {
+				data.parent = parent.data('id');
+			}
+
+			$.post('/admin/sort', data).fail(function() {
+				alert('An error occurred while trying to save the sort value. Please try again.');
+			});
+		};
+
+		var options = {
+			handle: '.sorting-handle',
+			items: 'li',
+			toleranceElement: '> div',
+			maxLevels: $(this).hasClass('nested') ? 0 : 1,
+			stop: onSortingDrop
+		};
+
+		if ($(this).hasClass('nested')) {
+			return $(this).nestedSortable(options);
+		} else {
+			return $(this).sortable(options);
+		}
+	});
+
+
+	/*===========================================
+	=            Deprecated Sortable            =
+	===========================================*/
+
 	$('[id=save-new-order]').on('click', function(e) {
 		e.preventDefault();
 		var sortable = $(this).data('sortable');
@@ -160,7 +209,7 @@ console.log($.extend(defaults, config)); // do not commit
 		return confirm( msg );
 	});
 
-	$('.sortable').each(function(){
+	$('.deprecated-sortable').each(function(){
 		var options = {
 			handle: '.sorting-handle',
 			items: 'li',
@@ -177,6 +226,17 @@ console.log($.extend(defaults, config)); // do not commit
 			return $(this).nestedSortable(options);
 		else
 			return $(this).sortable(options);
+	});
+
+	/*=====  End of Deprecated Sortable  ======*/
+
+
+
+	$('.main').on('click', '.btn[data-warn]', function() {
+		var msg = $(this).data('warn').length > 1
+			? $(this).data('warn')
+			: 'Are you sure you want to delete?';
+		return confirm( msg );
 	});
 
 	function extractId(obj)
