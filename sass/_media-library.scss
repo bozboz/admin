@@ -118,18 +118,19 @@ p.icons, .icons p {
         padding-top: 50%;
         text-align: center;
         transition: .2s ease-in-out;
-        background-color: rgba(49, 176, 213, 0);
-        border-color: rgba(38, 154, 188, 0);
-        color: rgba(white, 0);
+        background-color: transparent;
+        border-color: transparent;
+        color: transparent;
 
         &:hover {
             background-color: rgba(49, 176, 213, .5);
             border-color: rgba(38, 154, 188, 1);
             color: rgba(white, 1);
+            text-shadow: 1px 1px 1px rbga(black, .5);
         }
     }
     .btn-destroy {
-        @extend .btn-xs;
+        padding: 1px 5px;
         position: absolute;
         right: 7px;
         top: 7px;
