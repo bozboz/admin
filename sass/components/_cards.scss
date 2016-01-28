@@ -9,7 +9,6 @@
 	border: 1px solid white;
 	padding: 1em 1em 3em;
 	width: 100%;
-	position: relative;
 	vertical-align: middle;
 
 	.ui-sortable-helper & {
@@ -24,8 +23,9 @@
 }
 
 .cards__btn--delete {
+	position: absolute;
+	bottom: 1em;
 	right: 1em;
-	left: auto;
 }
 
 .cards .ui-sortable-placeholder {
