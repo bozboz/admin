@@ -202,13 +202,6 @@ jQuery(function($){
 		e.preventDefault();
 	});
 
-	$('.main').on('click', '.btn[data-warn]', function() {
-		var msg = $(this).data('warn').length > 1
-			? $(this).data('warn')
-			: 'Are you sure you want to delete?';
-		return confirm( msg );
-	});
-
 	$('.deprecated-sortable').each(function(){
 		var options = {
 			handle: '.sorting-handle',
