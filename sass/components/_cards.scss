@@ -1,0 +1,33 @@
+.cards {
+	margin: 1em 0;
+}
+
+.cards__item {
+	display: inline-block;
+	background: $gray-lighter;
+	border-radius: .5em;
+	border: 1px solid white;
+	padding: 1em 1em 3em;
+	width: 100%;
+	position: relative;
+	vertical-align: middle;
+
+	.ui-sortable-helper & {
+		box-shadow: 2px 2px 5px 1px rgba(black, .2);
+	}
+}
+
+.cards__btn {
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+}
+
+.cards__btn--delete {
+	right: 1em;
+	left: auto;
+}
+
+.cards .ui-sortable-placeholder {
+	height: 1em;
+}
