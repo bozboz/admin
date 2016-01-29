@@ -301,11 +301,11 @@ body.dragging, body.dragging * {
 .nested {
 	border-bottom: 1px solid #ddd;
 	margin-bottom: $gap;
-	ol {
+	.nested {
 		padding-left: 30px;
 		position: relative;
 		list-style: none;
-		li {
+		.nested__item {
 			border-left: 3px solid #ddd;
 
 			&:last-child {
@@ -314,22 +314,22 @@ body.dragging, body.dragging * {
 		}
 
 	}
-	li {
+	.nested__item {
 		border-top: 1px solid #ddd;
 		&:nth-child(odd) {
 			background-color: #f9f9f9;
-			li:nth-child(odd) {
+			.nested__item:nth-child(odd) {
 				background-color: #fff;
-				li:nth-child(odd) {
+				.nested__item:nth-child(odd) {
 					background-color: #f9f9f9;
 				}
 			}
 		}
 		&:nth-child(even) {
 			background-color: #fff;
-			li:nth-child(even) {
+			.nested__item:nth-child(even) {
 				background-color: #f9f9f9;
-				li:nth-child(even) {
+				.nested__item:nth-child(even) {
 					background-color: #fff;
 				}
 			}
@@ -339,7 +339,7 @@ body.dragging, body.dragging * {
 		}
 	}
 
-	> li:last-child {
+	> .nested__item:last-child {
 		margin-bottom: 0;
 	}
 
