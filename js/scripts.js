@@ -127,7 +127,7 @@ jQuery(function($){
 	=            New Sortable            =
 	====================================*/
 
-	$('.sortable:not(.deprecated-sortable)').each(function(){
+	$('.js-sortable').each(function(){
 
 		var onSortingDrop = function(e, obj) {
 			var before = obj.item.prev('[data-id]');
@@ -202,7 +202,7 @@ jQuery(function($){
 		e.preventDefault();
 	});
 
-	$('.deprecated-sortable').each(function(){
+	$('.sortable').each(function(){
 		var options = {
 			handle: '.sorting-handle',
 			items: 'li',
