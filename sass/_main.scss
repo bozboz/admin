@@ -355,7 +355,6 @@ body.dragging, body.dragging * {
 div.nested-group {
 	display: block;
 	padding: 8px;
-	height: 48px;
 	line-height: 32px;
 }
 
@@ -367,7 +366,7 @@ div.nested-group {
 	.faux-table-row:hover & {
 		color: #000;
 	}
-	.sortable & {
+	.ui-sortable &, .sortable & {
 		visibility: visible;
 	}
 }

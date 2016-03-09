@@ -154,8 +154,8 @@ jQuery(function($){
 		};
 
 		var options = {
-			handle: '.sorting-handle',
-			items: 'li',
+			handle: '.js-sorting-handle',
+			items: '.js-nested-item',
 			toleranceElement: '> div',
 			maxLevels: $(this).hasClass('nested') ? 0 : 1,
 			stop: onSortingDrop
