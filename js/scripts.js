@@ -103,6 +103,27 @@ jQuery(function($){
 		});
 	});
 
+	$('.js-datepicker-popup').click(function(e) {
+		e.preventDefault();
+
+		var dateField = $(this).find('.js-date');
+
+		if (!dateField.length) {
+			alert('Unable to find date input');
+			return;
+		}
+
+		dateField.datetimepicker({
+			dateFormat: 'yy-mm-dd',
+			onClose: function() {
+				if($(this).val()) {
+					$(this).closest('form').submit();
+				}
+			}
+		});
+		dateField.datepicker('show');
+	});
+
 	function sendFile(files, editor) {
 		var temp_form = $('<form></form>');
 		$('body').append(temp_form);
