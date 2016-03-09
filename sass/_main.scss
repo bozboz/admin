@@ -473,35 +473,41 @@ li.placeholder {
   .fileupload-buttonbar .toggle,
   .files .toggle,
   .files .btn span {
-    display: none;
+	display: none;
   }
   .files .name {
-    width: 80px;
-    word-wrap: break-word;
+	width: 80px;
+	word-wrap: break-word;
   }
   .files audio,
   .files video {
-    max-width: 80px;
+	max-width: 80px;
   }
   .files img,
   .files canvas {
-    max-width: 100%;
+	max-width: 100%;
   }
 }
 
 /* Fixes for IE < 8 */
 @media screen\9 {
   .fileinput-button input {
-    filter: alpha(opacity=0);
-    font-size: 100%;
-    height: 100%;
+	filter: alpha(opacity=0);
+	font-size: 100%;
+	height: 100%;
   }
 }
-
-
-
 
 /* DateTimeField */
 .ui-datepicker {
 	z-index: 1033 !important;
+}
+
+.dropdown-menu>li>form>button {
+	@extend .dropdown-menu>li>a;
+	width: 100%;
+	border: none;
+	outline: none;
+	background: transparent;
+	text-align: left;
 }
