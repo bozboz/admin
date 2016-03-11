@@ -56,7 +56,7 @@ jQuery(function($){
 
 		var displayFieldId = $picker.prop('id')+'_alt';
 
-		$('label[for='+$picker.prop('name')+']').prop('for', displayFieldId);
+		$('label[for="'+$picker.prop('id')+'"]').prop('for', displayFieldId);
 
 		var $displayField = $('<input>').prop({
 			type: 'text',
