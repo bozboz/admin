@@ -304,7 +304,6 @@ body.dragging, body.dragging * {
 	.nested {
 		padding-left: 30px;
 		position: relative;
-		list-style: none;
 		.nested__item {
 			border-left: 3px solid #ddd;
 
@@ -314,7 +313,11 @@ body.dragging, body.dragging * {
 		}
 
 	}
+	ol {
+		padding-left: 15px;
+	}
 	.nested__item {
+		list-style: none;
 		border-top: 1px solid #ddd;
 		&:nth-child(odd) {
 			background-color: #f9f9f9;
