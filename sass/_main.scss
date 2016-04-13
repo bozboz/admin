@@ -449,10 +449,13 @@ li.placeholder {
 .fileupload-buttonbar .toggle {
   margin-bottom: 5px;
 }
-.progress-animated .progress-bar,
-.progress-animated .bar {
-  background: url("../img/progressbar.gif") !important;
-  filter: none;
+.progress-bar {
+	content: '';
+	position: absolute;
+	background: rgba(black, .2);
+	height: 100%;
+	top: 0;
+	left: 0;
 }
 .fileupload-process {
   float: right;
