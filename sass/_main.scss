@@ -429,33 +429,47 @@ li.placeholder {
  */
 
 .fileinput-button {
-  position: relative;
-  overflow: hidden;
+	position: relative;
+	overflow: hidden;
 
-  input {
-	  position: absolute;
-	  top: 0;
-	  right: 0;
-	  margin: 0;
-	  opacity: 0;
-	  -ms-filter: 'alpha(opacity=0)';
-	  font-size: 200px;
-	  direction: ltr;
-	  cursor: pointer;
+	input {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+		opacity: 0;
+		-ms-filter: 'alpha(opacity=0)';
+		font-size: 200px;
+		direction: ltr;
+		cursor: pointer;
 	}
 }
 
 .fileupload-buttonbar .btn,
 .fileupload-buttonbar .toggle {
-  margin-bottom: 5px;
+	margin-bottom: 5px;
 }
-.progress-bar {
+.progress-animated .progress-bar,
+.progress-animated .bar {
+	background: url("../img/progressbar.gif") !important;
+	filter: none;
+}
+.inline-progress-bar {
 	content: '';
 	position: absolute;
 	background: rgba(black, .2);
 	height: 100%;
 	top: 0;
 	left: 0;
+
+	&:after {
+		content: attr(data-progress);
+		color: white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 }
 .fileupload-process {
   float: right;
