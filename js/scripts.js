@@ -3,6 +3,7 @@ jQuery(function($){
 	$('.select2').each(function() {
 		var obj = $(this);
 		var defaultParams = {
+			theme: "bootstrap",
 			minimumResultsForSearch: 15
 		};
 		obj.select2($.extend(defaultParams, obj.data()));
