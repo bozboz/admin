@@ -269,6 +269,9 @@ input.form-control-wide {
 	&:nth-child(odd) {
 		background-color: #f9f9f9;
 	}
+	&:hover {
+		background-color: darken(#f9f9f9, 5%);
+	}
 }
 .faux-table-heading {
 	font-weight: bold;
