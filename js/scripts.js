@@ -9,6 +9,10 @@ jQuery(function($){
 		obj.select2($.extend(defaultParams, obj.data()));
 	});
 
+	$('[data-toggle="popover"]').popover({
+		trigger: 'hover'
+	});
+
 	$('textarea.html-editor').summernote({
 		height: 230,
 		toolbar: [

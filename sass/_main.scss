@@ -185,6 +185,12 @@ label {
 
 }
 
+.field-helptext {
+	float: left;
+	margin-right: 10px;
+	cursor: help;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -342,6 +348,9 @@ body.dragging, body.dragging * {
 		}
 		&:last-child {
 			margin-bottom: $gap;
+		}
+		&:hover {
+			background-color: darken(#f9f9f9, 5%) !important;
 		}
 	}
 
