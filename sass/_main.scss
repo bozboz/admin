@@ -534,6 +534,10 @@ li.placeholder {
 	z-index: 1033 !important;
 }
 
+.dropdown-menu>li>form {
+	width: 100%;
+	display: block;
+}
 .dropdown-menu>li>form>button {
 	display: block;
 	padding: 3px 20px;
