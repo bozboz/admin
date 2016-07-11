@@ -1,5 +1,9 @@
 # Bozboz Admin Package Changelog
 
+## Version 1.0.5 (future)
+
+- Fix media library styles
+
 ## Version 1.0.4
 
 - Fix media uploader
