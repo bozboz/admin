@@ -1,5 +1,9 @@
 # Bozboz Admin Package Changelog
 
+## Version 1.0.6
+
+- Fix image uploading in Summernote editor
+
 ## Version 1.0.5
 
 - Fix media library styles
