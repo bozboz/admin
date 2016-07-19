@@ -132,7 +132,13 @@ jQuery(function($){
 	function sendFile(files, editor) {
 		var temp_form = $('<form></form>');
 		$('body').append(temp_form);
-		temp_form.fileupload().fileupload('send', {files: files, url: '/admin/media'})
+		temp_form.fileupload().fileupload('send', {
+			formData: {
+				_token: $('[name=_token]').val()
+			},
+			files: files,
+			url: '/admin/media'
+		})
 			.success(function(data) {
 				editor.summernote('insertImage', data.files[0].fullsizeUrl);
 				temp_form.remove();
