@@ -283,4 +283,18 @@ jQuery(function($){
 	$(window).resize(setTopPadding);
 	setTopPadding();
 
+	/*=================================
+	=            Bulk Edit            =
+	=================================*/
+	$('.js-select-all-instances').change(function() {
+		$(this).closest('.table-responsive').find('.js-select-instance').prop('checked', $(this).is(':checked'));
+	});
+
+	$('.js-bulk-update').submit(function(e) {
+		var form = $(this);
+		$('.js-select-instance').each(function() {
+			form.append($(this).prop('type', 'hidden'));
+		});
+	});
+
 });
