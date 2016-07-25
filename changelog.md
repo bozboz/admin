@@ -1,10 +1,9 @@
 # Bozboz Admin Package Changelog
 
-## Version 1.0.7 (25/07/2016)
-
 ## Version 1.0.6
 
 - Fix image uploading in Summernote editor
+- Add js for bulk editing features 
 
 ## Version 1.0.5
 
