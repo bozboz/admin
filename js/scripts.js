@@ -292,7 +292,7 @@ jQuery(function($){
 
 	$('.js-bulk-update').submit(function(e) {
 		var form = $(this);
-		$('.js-select-instance').each(function() {
+		$('.js-select-instance:checked').each(function() {
 			form.append($(this).prop('type', 'hidden'));
 		});
 	});
