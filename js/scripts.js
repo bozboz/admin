@@ -4,7 +4,10 @@ jQuery(function($){
 		var obj = $(this);
 		var defaultParams = {
 			theme: "bootstrap",
-			minimumResultsForSearch: 15
+			minimumResultsForSearch: 15,
+            templateSelection: function(item) {
+                return item.text.trim();
+            }
 		};
 		obj.select2($.extend(defaultParams, obj.data()));
 	});

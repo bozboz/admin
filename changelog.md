@@ -1,5 +1,9 @@
 # Bozboz Admin Package Changelog
 
+## Version 1.0.8
+
+- Trim selection selections. Useful for tree select type affairs.
+
 ## Version 1.0.7
 
 - Add js for bulk editing features
