@@ -1,5 +1,9 @@
 # Bozboz Admin Package Changelog
 
+## Version 1.0.9
+
+- Fix overflow issue with dropdown toggle buttons on admin reports
+
 ## Version 1.0.8
 
 - Trim selection selections. Useful for tree select type affairs.
