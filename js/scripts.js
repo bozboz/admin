@@ -164,13 +164,15 @@ jQuery(function($){
 
 	$('.js-sortable').each(function(){
 
+		var sort = $(this);
+
 		var onSortingDrop = function(e, obj) {
 			var before = obj.item.prev('[data-id]');
 			var after = obj.item.next('[data-id]');
 			var parent = obj.item.parent('ol').parent('li[data-id]');
 
 			var data = {
-				model: $(this).sortable().data('model'),
+				model: sort.sortable().data('model'),
 				instance: obj.item.data('id'),
 				_token: $('[name=_token]').val()
 			};
@@ -183,7 +185,11 @@ jQuery(function($){
 				data.parent = parent.data('id');
 			}
 
-			$.post('/admin/sort', data).fail(function() {
+			sort.addClass('is-blocked');
+
+			$.post('/admin/sort', data).always(function() {
+				sort.removeClass('is-blocked');
+			}).fail(function() {
 				alert('An error occurred while trying to save the sort value. Please try again.');
 			});
 		};
@@ -192,14 +198,14 @@ jQuery(function($){
 			handle: '.js-sorting-handle',
 			items: '.js-nested-item',
 			toleranceElement: '> div',
-			maxLevels: $(this).hasClass('nested') ? 0 : 1,
+			maxLevels: sort.hasClass('nested') ? 0 : 1,
 			stop: onSortingDrop
 		};
 
-		if ($(this).hasClass('nested')) {
-			return $(this).nestedSortable(options);
+		if (sort.hasClass('nested')) {
+			return sort.nestedSortable(options);
 		} else {
-			return $(this).sortable(options);
+			return sort.sortable(options);
 		}
 	});
 

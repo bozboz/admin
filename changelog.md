@@ -1,5 +1,9 @@
 # Bozboz Admin Package Changelog
 
+## Version 1.0.10
+
+- Block user interactions when sorting to prevent concurrent requests
+
 ## Version 1.0.9
 
 - Fix overflow issue with dropdown toggle buttons on admin reports
