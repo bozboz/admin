@@ -36,7 +36,7 @@ jQuery(function($){
 	var stringToDate = function(dateTimeString) {
 		var dateTimeExploded = dateTimeString.split(' ');
 		var dateInfo = dateTimeExploded[0].split('-');
-		var timeInfo = dateTimeExploded[1].split(':');
+		var timeInfo = dateTimeExploded[1] ? dateTimeExploded[1].split(':') : [0, 0, 0];
 
 		return new Date(dateInfo[0], dateInfo[1] - 1, dateInfo[2], timeInfo[0], timeInfo[1], timeInfo[2]);
 	};
