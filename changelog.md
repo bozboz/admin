@@ -1,5 +1,9 @@
 # Bozboz Admin Package Changelog
 
+## Version 1.0.12
+
+- Add z-index to `.is-blocked:before`
+
 ## Version 1.0.11
 
 - Fix repopulating datefield
