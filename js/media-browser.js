@@ -12,11 +12,11 @@ function MediaViewModel(data, url)
 		getPreviewImageUrl: function(filename, type, isPrivate)
 		{
 			if (isPrivate) {
-				return '/packages/bozboz/admin/images/private-document.png';
+				return '/assets/images/admin/private-document.png';
 			} else if (type == 'image') {
 				return self.selectedMedia.getFilename(filename);
 			} else {
-				return '/packages/bozboz/admin/images/document.png';
+				return '/assets/images/admin/document.png';
 			}
 		},
 		update: function()

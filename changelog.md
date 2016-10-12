@@ -1,5 +1,9 @@
 # Bozboz Admin Package Changelog
 
+## Version 1.0.13
+
+- Correct path to preview image in media browser
+
 ## Version 1.0.12
 
 - Add z-index to `.is-blocked:before`
