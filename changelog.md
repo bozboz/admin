@@ -1,5 +1,9 @@
 # Bozboz Admin Package Changelog
 
+## Version 1.0.14
+
+- Make select2 multiselect sortable
+
 ## Version 1.0.13
 
 - Correct path to preview image in media browser
