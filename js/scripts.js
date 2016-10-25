@@ -1,29 +1,28 @@
 (function($){
-    $.fn.extend({
-        select2_sortable: function(options){
-            var select = $(this);
-            $(select).select2($.extend(options, {
-                width: '100%',
-                createTag: function(params) {
-                    return undefined;
-                }
-            }));
-            var ul = $(select).next('.select2-container').first('ul.select2-selection__rendered');
-            ul.sortable({
-                placeholder : false,
-                forcePlaceholderSize: true,
-                items       : 'li:not(.select2-search__field)',
-                tolerance   : 'pointer',
-                stop: function() {
-                    $($(ul).find('.select2-selection__choice').get().reverse()).each(function() {
-                        var id = $(this).data('data').id;
-                        var option = select.find('option[value="' + id + '"]')[0];
-                        $(select).prepend(option);
-                    });
-                }
-            });
-        }
-    });
+	$.fn.extend({
+		select2_sortable: function(options){
+			var select = $(this);
+			$(select).select2($.extend(options, {
+				width: '100%',
+			}));
+			if (options.sortable) {
+				var ul = $(select).next('.select2-container').first('ul.select2-selection__rendered');
+				ul.sortable({
+					placeholder : false,
+					forcePlaceholderSize: true,
+					items       : 'li:not(.select2-search__field)',
+					tolerance   : 'pointer',
+					stop: function() {
+						$($(ul).find('.select2-selection__choice').get().reverse()).each(function() {
+							var id = $(this).data('data').id;
+							var option = select.find('option[value="' + id + '"]')[0];
+							$(select).prepend(option);
+						});
+					}
+				});
+			}
+		}
+	});
 }(jQuery));
 
 jQuery(function($){
@@ -33,9 +32,9 @@ jQuery(function($){
 		var defaultParams = {
 			theme: "bootstrap",
 			minimumResultsForSearch: 15,
-            templateSelection: function(item) {
-                return item.text.trim();
-            }
+			templateSelection: function(item) {
+				return item.text.trim();
+			}
 		};
 		obj.select2_sortable($.extend(defaultParams, obj.data()));
 	});

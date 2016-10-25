@@ -1,5 +1,9 @@
 # Bozboz Admin Package Changelog
 
+## Version 1.1.1
+
+- Make sortable multiselect functionality toggleable 
+
 ## Version 1.1.0
 
 - Make select2 multiselect sortable
