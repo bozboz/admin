@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "luigi": "2.1.x",
+    "luigi": "~2.2.0",
     "summernote": "~0.6.9",
     "font-awesome": "~4.4.0",
     "masonry": "~3.1.5",
