@@ -1,8 +1,12 @@
 # Bozboz Admin Package Changelog
 
-## Version 1.1.2
+## Version 1.1.3
 
 - Make styling on buttons in bootstrap dropdowns more general
+
+## Version 1.1.2
+
+- Update luigi requirement to 2.2.0
 
 ## Version 1.1.1
 
