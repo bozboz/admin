@@ -1,5 +1,9 @@
 # Bozboz Admin Package Changelog
 
+## Version 1.1.2
+
+- Make styling on buttons in bootstrap dropdowns more general
+
 ## Version 1.1.1
 
 - Make sortable multiselect functionality toggleable 
