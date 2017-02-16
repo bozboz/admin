@@ -20,7 +20,6 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps'),
 	uglify = require('gulp-uglify'),
 	minifyCSS = require('gulp-minify-css'),
-	combineMediaQueries = require('gulp-combine-media-queries'),
 	autoprefixer = require('gulp-autoprefixer');
 
 /**
@@ -47,7 +46,6 @@ gulp.task('admin-sass', function(){
 	gulp.src(config.sass.files)
 		.pipe(sass({ onError: function(err) { console.log(err) }}))
 		.pipe(autoprefixer({ browsers: ['last 2 versions'] }))
-		.pipe(combineMediaQueries())
 		.pipe(minifyCSS({ keepSpecialComments: 0 }))
 		.pipe(concat('style.css'))
 		.pipe(gulp.dest(config.sass.minFolder));
