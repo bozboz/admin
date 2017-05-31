@@ -1,5 +1,9 @@
 # Bozboz Admin Package Changelog
 
+## Version 1.2.0
+
+- Allow datepickers to have placeholders
+
 ## Version 1.1.3
 
 - Make styling on buttons in bootstrap dropdowns more general
