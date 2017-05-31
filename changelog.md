@@ -1,8 +1,12 @@
 # Bozboz Admin Package Changelog
 
-## Version 1.2.0
+## Version 2.1.0
 
 - Allow datepickers to have placeholders
+
+## Version 2.0.0
+
+- Change build process to npm, no gulp
 
 ## Version 1.1.3
 
