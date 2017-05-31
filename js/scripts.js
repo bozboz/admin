@@ -98,6 +98,7 @@ jQuery(function($){
 			id: displayFieldId,
 			name: displayFieldId,
 			class: $picker.prop('class'),
+			placeholder: $picker.attr('placeholder'),
 		});
 		$displayField.insertAfter($picker);
 
