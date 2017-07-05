@@ -329,8 +329,9 @@ jQuery(function($){
 
 	$('.js-bulk-update').submit(function(e) {
 		var form = $(this);
+		form.find('[type=checkbox]').remove();
 		$('.js-select-instance:checked').each(function() {
-			form.append($(this).prop('type', 'hidden'));
+			$(this).clone().prop('type', 'hidden').appendTo(form);
 		});
 	});
 

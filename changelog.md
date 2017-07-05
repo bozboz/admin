@@ -1,5 +1,8 @@
 # Bozboz Admin Package Changelog
 
+## Version 1.1.4 (2017-07-05)
+- Clone checkboxes from bulk report rather than moving them
+
 ## Version 2.1.0
 
 - Allow datepickers to have placeholders
