@@ -1,5 +1,8 @@
 # Bozboz Admin Package Changelog
 
+## Version 2.2.0 (2017-07-17)
+- Set summernote to paste as plain text
+
 ## Version 2.1.1 (2017-07-05)
 - Clone checkboxes from bulk report rather than moving them
 
