@@ -1,5 +1,8 @@
 # Bozboz Admin Package Changelog
 
+## Version 1.2.0
+- Set summernote to paste as plain text
+
 ## Version 1.1.3
 
 - Make styling on buttons in bootstrap dropdowns more general
