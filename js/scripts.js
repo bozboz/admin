@@ -56,6 +56,11 @@ jQuery(function($){
 		],
 		onImageUpload: function(files) {
 			sendFile(files, $(this));
+		},
+        onPaste: function (e) {
+            var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
+            e.preventDefault();
+            document.execCommand('insertText', false, bufferText);
 		}
 	});
 
