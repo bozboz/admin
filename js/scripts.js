@@ -54,14 +54,16 @@ jQuery(function($){
 			['view', ['fullscreen', 'codeview']],
 			['help', ['help']]
 		],
-		onImageUpload: function(files) {
-			sendFile(files, $(this));
+		callbacks: {
+			onImageUpload: function(files) {
+				sendFile(files, $(this));
+			},
+	        onPaste: function (e) {
+	            var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
+	            e.preventDefault();
+	            document.execCommand('insertText', false, bufferText);
+	        }
 		},
-        onPaste: function (e) {
-            var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
-            e.preventDefault();
-            document.execCommand('insertText', false, bufferText);
-        }
 	});
 
 	//Convert a MySQL DateTime formatted string into a JS Date object

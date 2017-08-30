@@ -35,6 +35,7 @@
 		"bower_components/blueimp-file-upload/js/**.*": "public/assets/js/min/admin/blueimp-file-upload",
 		"bower_components/blueimp-tmpl/js/**.*": "public/assets/js/min/admin/blueimp-tmpl",
 		"bower_components/blueimp-load-image/js/**.*": "public/assets/js/min/admin/blueimp-load-image",
-		"bower_components/jquery-ui/themes/base/images/*": "public/assets/css/min/admin/images"
+		"bower_components/jquery-ui/themes/base/images/*": "public/assets/css/min/admin/images",
+		"bower_components/summernote/dist/font/*": "public/assets/css/min/admin/font"
 	}
 }
