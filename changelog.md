@@ -1,5 +1,8 @@
 # Bozboz Admin Package Changelog
 
+## Version 2.3.0 (2017-08-30)
+- Update summernote
+
 ## Version 2.2.0 (2017-07-17)
 - Set summernote to paste as plain text
 
