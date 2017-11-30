@@ -43,6 +43,30 @@ jQuery(function($){
 		trigger: 'hover'
 	});
 
+	function onPaste(e)
+	{
+		var content;
+		e.preventDefault();
+
+		if( (e.originalEvent || e).clipboardData ) {
+			content = (e.originalEvent || e).clipboardData.getData('text/plain');
+			document.execCommand('insertText', false, content);
+			return false;
+		} else if( window.clipboardData ) {
+			content = window.clipboardData.getData('Text').split('\n').filter(function(line) {
+				return line.replace(/[\s\uFEFF\xA0]+/g, '')!='';
+			});
+			if (window.getSelection) {
+				for (var i = content.length - 1; i >= 0; i--) {
+					var p = document.createElement('p');
+					var text = document.createTextNode(content[i]);
+					p.appendChild(text);
+					window.getSelection().getRangeAt(0).insertNode( p );
+				}
+			}
+		}
+	}
+
 	$('textarea.html-editor').summernote({
 		height: 230,
 		toolbar: [
@@ -58,11 +82,7 @@ jQuery(function($){
 			onImageUpload: function(files) {
 				sendFile(files, $(this));
 			},
-	        onPaste: function (e) {
-	            var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
-	            e.preventDefault();
-	            document.execCommand('insertText', false, bufferText);
-	        }
+	        onPaste: onPaste
 		},
 	});
 
