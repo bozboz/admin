@@ -338,7 +338,7 @@ jQuery(function($){
 		var form = $(this);
 		form.find('[type=checkbox]').remove();
 		$('.js-select-instance:checked').each(function() {
-			$(this).clone().prop('type', 'hidden').appendTo(form);
+			form.append($(this).clone());
 		});
 	});
 
