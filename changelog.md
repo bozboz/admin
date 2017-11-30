@@ -2,6 +2,7 @@
 
 ## Version 2.3.1 (2017-11-31)
 - Fix bulk edit checkbox js in IE
+- Update to summernote v0.8.8
 
 ## Version 2.3.0 (2017-08-30)
 - Update summernote
