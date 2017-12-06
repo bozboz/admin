@@ -1,5 +1,8 @@
 # Bozboz Admin Package Changelog
 
+## Version 2.3.2 (2017-12-06)
+- Set specific select2 version in bower config
+
 ## Version 2.3.1 (2017-11-31)
 - Fix bulk edit checkbox js in IE
 - Update to summernote v0.8.8
