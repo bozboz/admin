@@ -1,6 +1,8 @@
 # Installation to work on package
 This bower package is pulled in at a fixed version by the barebones app so for most sites sits at that version, to develop a new feature for the package this repo should be cloned, then the changes should be committed and tagged, then updated in the site/barebones' bower.json file.
 
+To test changes to this package while in development, uninstall the version of admin on the relevant site (bower uninstall admin) then install your dev version using [bower link](https://bower.io/docs/api/#link) - "bower link" in the admin package then "bower link admin" in the site package.
+
 # Installation
 Install via bower:
 
