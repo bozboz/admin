@@ -1,3 +1,6 @@
+# Installation to work on package
+This bower package is pulled in at a fixed version by the barebones app so for most sites sits at that version, to develop a new feature for the package this repo should be cloned, then the changes should be committed and tagged, then updated in the site/barebones' bower.json file.
+
 # Installation
 Install via bower:
 
