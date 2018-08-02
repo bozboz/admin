@@ -72,6 +72,7 @@ jQuery(function($){
 		toolbar: [
 			['style', ['style']],
 			['font', ['bold', 'italic', 'underline', 'clear']],
+			['color', ['color']],
 			['para', ['ul', 'ol', 'paragraph']],
 			['table', ['table']],
 			['insert', ['link', 'picture', 'video']],
