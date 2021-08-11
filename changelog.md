@@ -1,5 +1,8 @@
 # Bozboz Admin Package Changelog
 
+## Version 2.4.0 (2021-08-11)
+- Fix select2 multi sorting
+
 ## Version 2.3.2 (2017-12-06)
 - Set specific select2 version in bower config
 
@@ -34,7 +37,7 @@
 
 ## Version 1.1.1
 
-- Make sortable multiselect functionality toggleable 
+- Make sortable multiselect functionality toggleable
 
 ## Version 1.1.0
 
@@ -70,7 +73,7 @@
 
 ## Version 1.0.6
 
-- Fix image uploading in Summernote editor 
+- Fix image uploading in Summernote editor
 
 ## Version 1.0.5
 
