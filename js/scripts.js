@@ -13,11 +13,15 @@
 					items       : 'li:not(.select2-search__field)',
 					tolerance   : 'pointer',
 					stop: function() {
-						$($(ul).find('.select2-selection__choice').get().reverse()).each(function() {
-							var id = $(this).data('data').id;
-							var option = select.find('option[value="' + id + '"]')[0];
-							$(select).prepend(option);
-						});
+                        $(select).parent().find("ul.select2-selection__rendered").children("li[title]").each(function(i, obj){
+                            const element = $(select).children('option').filter(function () {
+                                console.log($(this).html(), obj.title)
+                                return $(this).html() == obj.title;
+                            });
+                            const parent = element.parent();
+                            element.detach();
+                            parent.append(element);
+                        });
 					}
 				});
 			}
